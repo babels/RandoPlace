@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RandoPlace : MonoBehaviour {
+
+ public GameObject[] objs;
+
+  void Update() {
+        
+  }
+
+
+  void Start() {
+
+     foreach (GameObject obj in objs) {
+       obj.transform.position = new Vector3(Random.Range(-25.0f, 25.0f), obj.transform.position.y, Random.Range(-25.0f, 25.0f));
+       Debug.Log(obj.name);
+     }
+  }
+}
